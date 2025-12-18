@@ -144,6 +144,7 @@
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
+            width: 100%;
         }
         
         body {
@@ -153,6 +154,8 @@
             background: var(--bg-dark);
             position: relative;
             overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
         }
         
         /* Skip to content link for accessibility */
@@ -184,9 +187,10 @@
             padding: 1.2rem var(--spacing-xl);
             z-index: var(--z-nav);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             border-bottom: 1px solid var(--border-color-light);
+            box-sizing: border-box;
         }
         
         .logo {
@@ -194,6 +198,7 @@
             font-weight: 700;
             color: var(--text-primary);
             letter-spacing: -0.3px;
+            margin-right: 2.5rem;
         }
         
         .nav-toggle {
@@ -205,6 +210,8 @@
             cursor: pointer;
             padding: var(--spacing-xs);
             z-index: calc(var(--z-nav) + 1);
+            position: absolute;
+            right: var(--spacing-xl);
         }
         
         .nav-toggle:focus {
@@ -250,6 +257,8 @@
             padding: var(--spacing-2xl) var(--spacing-xl) var(--spacing-xl);
             max-width: 1200px;
             margin: 0 auto;
+            box-sizing: border-box;
+            width: 100%;
         }
         
         section:first-of-type {
@@ -270,6 +279,8 @@
             align-items: center;
             margin-bottom: var(--spacing-xl);
             min-height: 500px;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .profile-card {
@@ -282,6 +293,8 @@
             backdrop-filter: blur(10px);
             position: relative;
             overflow: hidden;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .profile-card::before {
@@ -302,6 +315,7 @@
         .profile-image-wrapper img {
             width: 200px;
             height: 200px;
+            max-width: 100%;
             border-radius: var(--radius-full);
             object-fit: cover;
             border: 4px solid rgba(99, 102, 241, 0.5);
@@ -331,6 +345,7 @@
         .photo-placeholder {
             width: 200px;
             height: 200px;
+            max-width: 100%;
             border-radius: var(--radius-full);
             background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
             display: flex;
@@ -412,6 +427,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .hero-description {
@@ -421,6 +438,8 @@
             line-height: 1.9;
             max-width: 750px;
             font-weight: 400;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         
         .download-btn {
@@ -451,7 +470,7 @@
         
         .tech-tags {
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             gap: 0.6rem;
             margin-top: var(--spacing-lg);
         }
@@ -467,6 +486,7 @@
             backdrop-filter: blur(10px);
             transition: all var(--transition-base);
             white-space: nowrap;
+            flex-shrink: 0;
         }
         
         .tech-tag:hover {
@@ -520,6 +540,8 @@
             border: 1px solid var(--border-color);
             backdrop-filter: blur(10px);
             box-shadow: var(--shadow-lg);
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .skills-tags {
@@ -553,9 +575,10 @@
            ============================================ */
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: var(--spacing-md);
             margin-top: var(--spacing-md);
+            width: 100%;
         }
         
         .project-card {
@@ -566,6 +589,8 @@
             transition: all var(--transition-base);
             border: 1px solid var(--border-color);
             backdrop-filter: blur(10px);
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .project-card:focus-within {
@@ -750,6 +775,10 @@
            RESPONSIVE DESIGN
            ============================================ */
         @media (max-width: 968px) {
+            section {
+                padding: var(--spacing-2xl) var(--spacing-lg) var(--spacing-xl);
+            }
+            
             .hero {
                 grid-template-columns: 1fr;
                 gap: 2.5rem;
@@ -769,12 +798,20 @@
         @media (max-width: 768px) {
             nav {
                 padding: var(--spacing-sm) var(--spacing-md);
-                flex-wrap: wrap;
                 justify-content: space-between;
             }
             
             .nav-toggle {
                 display: block;
+                position: absolute;
+                right: var(--spacing-md);
+            }
+            
+            .logo {
+                font-size: 1.1rem;
+                margin-right: 0;
+                position: absolute;
+                left: var(--spacing-md);
             }
             
             nav ul {
@@ -804,10 +841,6 @@
             nav a {
                 font-size: 1.2rem;
                 padding: var(--spacing-sm);
-            }
-            
-            .logo {
-                font-size: 1.1rem;
             }
             
             section {
@@ -882,8 +915,8 @@
             .tech-tags {
                 gap: 0.5rem;
                 margin-top: 1.2rem;
-                flex-wrap: nowrap;
-                overflow-x: auto;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .tech-tag {
@@ -920,6 +953,7 @@
                 grid-template-columns: 1fr;
                 gap: 1.2rem;
                 margin-top: 1.2rem;
+                min-width: 0;
             }
             
             .project-card {
@@ -1002,6 +1036,11 @@
             
             .logo {
                 font-size: var(--font-size-base);
+                left: var(--spacing-sm);
+            }
+            
+            .nav-toggle {
+                right: var(--spacing-sm);
             }
             
             nav ul {
@@ -1024,10 +1063,13 @@
             .hero {
                 gap: var(--spacing-md);
                 margin-bottom: var(--spacing-lg);
+                width: 100%;
             }
             
             .profile-card {
                 padding: var(--spacing-md) var(--spacing-sm);
+                width: 100%;
+                max-width: 100%;
             }
             
             .profile-image-wrapper img,
@@ -1073,18 +1115,20 @@
             .tech-tags {
                 gap: 0.4rem;
                 margin-top: var(--spacing-sm);
-                flex-wrap: nowrap;
-                overflow-x: auto;
+                flex-wrap: wrap;
+                justify-content: center;
             }
             
             .tech-tag {
                 padding: 0.4rem 0.8rem;
                 font-size: 0.7rem;
+                white-space: normal;
             }
             
             h2 {
                 font-size: 1.6rem;
                 margin-bottom: 1.2rem;
+                word-wrap: break-word;
             }
             
             .about-content {
@@ -1108,6 +1152,7 @@
             .project-grid {
                 gap: var(--spacing-sm);
                 margin-top: var(--spacing-sm);
+                min-width: 0;
             }
             
             .project-card h3 {
@@ -1149,6 +1194,40 @@
             footer {
                 padding: var(--spacing-md) var(--spacing-sm);
                 font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            section {
+                padding: 2.5rem var(--spacing-xs) var(--spacing-md);
+            }
+            
+            section:first-of-type {
+                padding-top: 6.5rem;
+            }
+            
+            nav {
+                padding: 0.7rem var(--spacing-xs);
+            }
+            
+            .logo {
+                left: var(--spacing-xs);
+            }
+            
+            .nav-toggle {
+                right: var(--spacing-xs);
+            }
+            
+            .hero-headline {
+                font-size: 1.5rem;
+            }
+            
+            .hero-description {
+                font-size: 0.85rem;
+            }
+            
+            h2 {
+                font-size: 1.4rem;
             }
         }
     </style>
