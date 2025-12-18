@@ -1,0 +1,198 @@
+%-------------------------
+% Modern Resume Template in LaTeX
+% Author : Kapildev Palanisamy
+% Clean, Modern, Professional Design
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+% \input{glyphtounicode}  % Commented out - file not found
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{0.8in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-2pt}\mdseries\raggedright\large\MakeUppercase
+}{}{0em}{}[\vspace{-3pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular}[t]{l}
+        \textbf{\Huge Kapildev Palanisamy} \\
+        \vspace{2pt} \\
+        \textit{\large ML Engineer \& Computer Vision Specialist}
+    \end{tabular} &
+    \begin{tabular}[t]{r}
+        \small \raisebox{-0.1\height}\faPhone\ +91 99443 36673 \\
+        \small \href{mailto:kdev.palanisamy.pr@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{kdev.palanisamy.pr@gmail.com}} \\
+        \small \href{https://www.linkedin.com/in/kapildev-palanisamy-a3a809213}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/kapildev-palanisamy}} \\
+        \small \href{https://eportfolio.mygreatlearning.com/kapil-dev2}{\raisebox{-0.2\height}\faGlobe\ \underline{eportfolio.mygreatlearning.com/kapil-dev2}}
+    \end{tabular}
+\end{tabular*}
+\vspace{-8pt}
+
+%-----------SUMMARY-----------
+\section{Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+        I'm a Data Scientist specializing in computer vision and geospatial AI for satellite imagery analysis. I develop semantic segmentation and object detection models using PyTorch and TensorFlow, working with SAR and optical remote sensing data. My work spans the full ML pipeline from data preprocessing and annotation workflows to model training and evaluation. I process satellite imagery from Capella, Umbra, Planet SkySat, and Sentinel missions to build real-world geospatial intelligence solutions.
+    }}
+\end{itemize}\vspace{-3pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Data Scientist}{November 2022 -- December 2025}
+      {labelbees.ai}{}
+      \resumeItemListStart
+        \resumeItem{Developed semantic segmentation models for urban infrastructure and sidewalk detection using OpenStreetMap (OSM) data, identifying obstacles and accessibility features with DeepLabV3+ (ResNet-18/34/50/101)}
+        \resumeItem{Built multi-class ship detection and instance segmentation pipelines on 0.5m electro-optical satellite imagery (Planet SkySat, SpaceNet) using Mask R-CNN (ResNet-50) and Pix2Poly for precise polygon extraction}
+        \resumeItem{Trained single-class and multi-class SAR ship detection models on Capella 0.5m SAR imagery, experimenting with Mask R-CNN, SRNet, Oriented R-CNN, Rotated FCOS, and Mask2Former using ResNet-50 and Swin Transformer backbones to handle object rotation and orientation}
+        \resumeItem{Developed SAR ship detection models on Umbra imagery, applying Mask2Former (ResNet-50) for both single-class and multi-class detection using a consistent rotated-object detection pipeline}
+        \resumeItem{Implemented Land Use / Land Cover (LULC) semantic segmentation on Sentinel-2 (10m) imagery to monitor new construction and road development in border regions, using DeepLabV3+ with ResNet-50}
+        \resumeItem{Trained high-resolution LULC segmentation models on SpaceNet (0.5m) imagery using DeepLabV3+ (ResNet-50) to capture fine-grained land-cover patterns}
+        \resumeItem{Built building and infrastructure detection models using UNet++ with ResNet-50, including: single-class building detection (Planet SkySat + SpaceNet), multi-class residential area segmentation, and single-class greenhouse detection}
+        \resumeItem{Developed a flood detection semantic segmentation pipeline using a public Kaggle competition dataset derived from Sentinel-1 and Sentinel-2 pre- and post-event imagery, achieved mIoU ≈ 0.80 using UNet++}
+        \resumeItem{Developed scalable inference pipelines on AWS SageMaker for foundation models, including CLIP, SAM2, Grounding DINO, and Grounded SAM, enabling automated annotation and image search workflows}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Intern}{May 2022 -- November 2022}
+      {labelbees.ai}{}
+      \resumeItemListStart
+        \resumeItem{Built a strong foundation in Computer Vision and Object Detection, working with image data, annotations, and core machine learning concepts}
+        \resumeItem{Contributed to internal ML projects by performing data preprocessing and Exploratory Data Analysis (EDA) using Python and Pandas, including data cleaning, distribution analysis, data visualization}
+        \resumeItem{Trained and evaluated deep learning models using TensorFlow on Google Colab, gaining hands-on experience with training workflows, performance evaluation, and experimentation}
+        \resumeItem{Developed Python scripts for dataset handling, including annotation format conversions and efficient organization of large-scale JSON files}
+        \resumeItem{Designed and implemented COCO dataset conversion pipelines, enabling seamless transformation and management of annotation data}
+        \resumeItem{Supported Proof of Concept (POC) initiatives by selecting representative image samples across multiple categories from large datasets to ensure coverage and balance}
+        \resumeItem{Conducted annotation quality checks, identifying labeling inconsistencies and improving overall dataset consistency and usability}
+      \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+
+%------TECHNICAL SKILLS-------
+\section{Technical Skills}
+  \begin{itemize}[leftmargin=0.15in, label={}, itemsep=4pt, parsep=2pt]
+    \small{\item{
+     \textbf{Languages:} Python
+    }}
+    \small{\item{
+     \textbf{Frameworks:} PyTorch, TensorFlow, Segmentation Models (TensorFlow/Keras, PyTorch), mmdetection, mmrotate, Hugging Face
+    }}
+    \small{\item{
+     \textbf{Libraries \& Tools:} GDAL, Shapely, QGIS, Labelbox, Plotly, pycocotools
+    }}
+    \small{\item{
+     \textbf{Cloud:} AWS S3, EC2, SageMaker
+    }}
+    \small{\item{
+     \textbf{Domains:} EO (Multi-band) \& SAR Satellite Imagery, Remote Sensing, Auto-Labeling, Google OpenStreetMap, RGB Imagery
+    }}
+ \end{itemize}\vspace{-3pt}
+
+%-----------KEY ACHIEVEMENTS-----------
+\section{Key Achievements}
+  \resumeSubHeadingListStart
+    \resumeItemListStart
+      \resumeItem{Read and implemented 25+ research papers to stay current with state-of-the-art computer vision and geospatial AI techniques, applying cutting-edge methodologies to production systems}
+      \resumeItem{Developed expertise across diverse satellite imagery types including commercial high-resolution SAR (Capella Space, Umbra Space), optical imagery (Planet SkySat, SpaceNet), and multi-spectral sensors (Sentinel-1, Sentinel-2)}
+      \resumeItem{Built comprehensive automated workflows for data quality assessment, model training, evaluation, and deployment, significantly reducing manual effort and improving reproducibility}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Great Lakes Institute of Management}{2022}
+      {PGP Data Science and Engineering}{}
+    \resumeSubheading
+      {Sri Krishna Adithya College of Arts and Science}{2021}
+      {B.Sc. Mathematics}{CGPA: 79.4\%}
+  \resumeSubHeadingListEnd
+
+\end{document}
