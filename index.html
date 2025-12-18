@@ -53,6 +53,7 @@
             margin: 0;
             padding: 0;
             flex-wrap: wrap;
+            align-items: center;
         }
         
         nav a {
@@ -68,28 +69,28 @@
         }
         
         section {
-            padding: 6rem 3rem 4rem;
+            padding: 4rem 3rem 3rem;
             max-width: 1200px;
             margin: 0 auto;
         }
         
         section:first-of-type {
-            padding-top: 10rem;
+            padding-top: 8rem;
         }
         
         .hero {
             display: grid;
             grid-template-columns: 380px 1fr;
-            gap: 5rem;
+            gap: 3.5rem;
             align-items: center;
-            margin-bottom: 6rem;
-            min-height: 600px;
+            margin-bottom: 3rem;
+            min-height: 500px;
         }
         
         .profile-card {
             background: linear-gradient(135deg, rgba(15, 15, 25, 0.8), rgba(20, 20, 35, 0.8));
             border-radius: 24px;
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 2rem;
             text-align: center;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -169,7 +170,7 @@
         .role-keywords {
             font-size: 0.95rem;
             color: #a0a0b0;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.8rem;
             line-height: 1.7;
             font-weight: 400;
         }
@@ -235,7 +236,7 @@
             font-weight: 600;
             font-size: 1rem;
             display: inline-block;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             transition: all 0.3s;
             border: none;
             box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
@@ -275,7 +276,7 @@
             font-size: 2.8rem;
             font-weight: 800;
             color: #ffffff;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.8rem;
             background: linear-gradient(135deg, #ffffff, #e0e7ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -298,8 +299,8 @@
         .skills-container {
             background: linear-gradient(135deg, rgba(15, 15, 25, 0.8), rgba(20, 20, 35, 0.8));
             border-radius: 20px;
-            padding: 3rem;
-            margin-top: 2rem;
+            padding: 2.5rem;
+            margin-top: 1.5rem;
             max-width: 1000px;
             border: 1px solid rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(10px);
@@ -310,7 +311,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.8rem;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
         }
         
         .skill-tag {
@@ -335,13 +336,13 @@
         .project-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
         }
         
         .project-card {
             background: linear-gradient(135deg, rgba(15, 15, 25, 0.8), rgba(20, 20, 35, 0.8));
-            padding: 2.5rem;
+            padding: 2rem;
             border-radius: 20px;
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             transition: all 0.3s;
@@ -383,8 +384,8 @@
         }
         
         .experience-item {
-            margin-bottom: 3.5rem;
-            padding-bottom: 3.5rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
             border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
         
@@ -396,7 +397,7 @@
         
         .experience-item h3 {
             color: #ffffff;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
             font-size: 1.6rem;
             font-weight: 700;
         }
@@ -404,14 +405,14 @@
         .experience-date {
             color: #a0a0b0;
             font-size: 1rem;
-            margin-bottom: 1.8rem;
+            margin-bottom: 1.2rem;
             font-weight: 500;
         }
         
         .experience-item ul {
             list-style: none;
             color: #b0b0c0;
-            line-height: 2;
+            line-height: 1.8;
         }
         
         .experience-item ul li {
@@ -436,7 +437,7 @@
         .contact-content p {
             font-size: 1.1rem;
             color: #b0b0b0;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             line-height: 1.8;
         }
         
@@ -461,7 +462,7 @@
         
         footer {
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem 2rem;
             background: rgba(10, 10, 15, 0.8);
             color: #b0b0b0;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
@@ -471,7 +472,7 @@
         @media (max-width: 968px) {
             .hero {
                 grid-template-columns: 1fr;
-                gap: 4rem;
+                gap: 2.5rem;
                 min-height: auto;
             }
             
@@ -489,39 +490,349 @@
             nav {
                 padding: 1rem 1.5rem;
                 flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logo {
+                font-size: 1.1rem;
+                margin-bottom: 0.5rem;
             }
             
             nav ul {
-                gap: 1rem;
+                gap: 0.8rem;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            nav ul li {
+                flex-shrink: 0;
+            }
+            
+            nav a {
+                font-size: 0.85rem;
+                padding: 0.3rem 0.5rem;
             }
             
             section {
-                padding: 5rem 1.5rem 3rem;
+                padding: 3rem 1.5rem 2.5rem;
             }
             
             section:first-of-type {
-                padding-top: 8rem;
+                padding-top: 6rem;
+            }
+            
+            .hero {
+                gap: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .profile-card {
+                max-width: 100%;
+                padding: 1.8rem 1.5rem;
+                margin: 0 auto;
+            }
+            
+            .profile-image-wrapper img,
+            .photo-placeholder {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .photo-placeholder {
+                font-size: 3rem;
+            }
+            
+            .role-title {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .role-keywords {
+                font-size: 0.85rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .social-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
             }
             
             .hero-headline {
-                font-size: 2.2rem;
+                font-size: 2rem;
                 letter-spacing: -1px;
+                margin-bottom: 1.2rem;
+                line-height: 1.2;
             }
             
             .hero-description {
-                font-size: 1rem;
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+                line-height: 1.7;
             }
             
-            .hero-description {
-                font-size: 1rem;
+            .download-btn {
+                padding: 0.95rem 2rem;
+                font-size: 0.95rem;
+                margin-bottom: 1.5rem;
+                display: block;
+                text-align: center;
+            }
+            
+            .tech-tags {
+                gap: 0.7rem;
+                margin-top: 1.2rem;
+            }
+            
+            .tech-tag {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
             }
             
             h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            
+            .about-content {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+            
+            .skills-container {
+                padding: 2rem 1.5rem;
+                margin-top: 1.5rem;
+            }
+            
+            .skills-tags {
+                gap: 0.7rem;
+                margin-top: 1rem;
+            }
+            
+            .skill-tag {
+                padding: 0.65rem 1.2rem;
+                font-size: 0.85rem;
             }
             
             .project-grid {
                 grid-template-columns: 1fr;
+                gap: 1.2rem;
+                margin-top: 1.2rem;
+            }
+            
+            .project-card {
+                padding: 1.8rem 1.5rem;
+            }
+            
+            .project-card h3 {
+                font-size: 1.2rem;
+                margin-bottom: 0.8rem;
+            }
+            
+            .project-card ul {
+                font-size: 0.95rem;
+                line-height: 1.7;
+            }
+            
+            .project-card ul li {
+                padding-left: 1.2rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .experience-item {
+                margin-bottom: 2rem;
+                padding-bottom: 2rem;
+            }
+            
+            .experience-item h3 {
+                font-size: 1.3rem;
+                margin-bottom: 0.5rem;
+            }
+            
+            .experience-date {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+            }
+            
+            .experience-item ul {
+                font-size: 0.95rem;
+                line-height: 1.8;
+            }
+            
+            .experience-item ul li {
+                padding-left: 1.2rem;
+                margin-bottom: 0.7rem;
+            }
+            
+            .contact-content p {
+                font-size: 1rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .send-mail-btn {
+                padding: 0.95rem 2rem;
+                font-size: 0.95rem;
+                display: block;
+                text-align: center;
+            }
+            
+            footer {
+                padding: 1.5rem 1.5rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.8rem 1rem;
+            }
+            
+            .logo {
+                font-size: 1rem;
+            }
+            
+            nav ul {
+                gap: 0.5rem;
+            }
+            
+            nav a {
+                font-size: 0.75rem;
+                padding: 0.25rem 0.4rem;
+            }
+            
+            section {
+                padding: 3rem 1rem 2rem;
+            }
+            
+            section:first-of-type {
+                padding-top: 5.5rem;
+            }
+            
+            .hero {
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+            
+            .profile-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .profile-image-wrapper img,
+            .photo-placeholder {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .photo-placeholder {
+                font-size: 2.5rem;
+            }
+            
+            .role-title {
+                font-size: 1.1rem;
+            }
+            
+            .role-keywords {
+                font-size: 0.8rem;
+            }
+            
+            .social-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            .hero-headline {
+                font-size: 1.7rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-description {
+                font-size: 0.9rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .download-btn {
+                padding: 0.85rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+                margin-bottom: 1.2rem;
+            }
+            
+            .tech-tags {
+                gap: 0.6rem;
+                margin-top: 1rem;
+            }
+            
+            .tech-tag {
+                padding: 0.55rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .about-content {
+                font-size: 0.95rem;
+            }
+            
+            .skills-container {
+                padding: 1.5rem 1rem;
+                margin-top: 1rem;
+            }
+            
+            .skill-tag {
+                padding: 0.6rem 1rem;
+                font-size: 0.8rem;
+            }
+            
+            .project-card {
+                padding: 1.5rem 1rem;
+            }
+            
+            .project-grid {
+                gap: 1rem;
+                margin-top: 1rem;
+            }
+            
+            .project-card h3 {
+                font-size: 1.1rem;
+            }
+            
+            .project-card ul {
+                font-size: 0.9rem;
+            }
+            
+            .experience-item {
+                margin-bottom: 1.8rem;
+                padding-bottom: 1.8rem;
+            }
+            
+            .experience-item h3 {
+                font-size: 1.2rem;
+            }
+            
+            .experience-item ul {
+                font-size: 0.9rem;
+            }
+            
+            .contact-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+            
+            .send-mail-btn {
+                padding: 0.85rem 1.5rem;
+                font-size: 0.9rem;
+                width: 100%;
+            }
+            
+            footer {
+                padding: 1.5rem 1rem;
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -601,9 +912,7 @@
                 <span class="skill-tag">Plotly</span>
                 <span class="skill-tag">pycocotools</span>
                 <!-- Cloud -->
-                <span class="skill-tag">AWS S3</span>
-                <span class="skill-tag">AWS EC2</span>
-                <span class="skill-tag">AWS SageMaker</span>
+                <span class="skill-tag">AWS</span>
                 <!-- Domains -->
                 <span class="skill-tag">SAR Satellite Imagery</span>
                 <span class="skill-tag">EO Imagery</span>
